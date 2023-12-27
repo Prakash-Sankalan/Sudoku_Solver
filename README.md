@@ -25,3 +25,26 @@ algorithm. Backtracking is an efficient technique that tries different possible
 values for each empty cell, exploring all possible paths until a valid solution is
 found. If a conflict arises, the algorithm backtracks and explores other
 possibilities.
+Logic
+In order to solve the Sudoku, the basic algorithm utilised is the backtracking
+algorithm. The backtracking algorithm is a recursive algorithm used to solve
+problems that involve finding a solution among a large number of possibilities. It is
+based on the idea of trying out all possible choices and "backtracking" or undoing
+choices that lead to dead-ends or incorrect solutions.
+In this case the algorithm starts by searching for an empty cell in the Sudoku grid
+(i.e., a cell with the value 0). The algorithm then tries filling the empty cell with a
+number from 1 to 9, one by one. After placing a number in the cell, the algorithm
+checks if the current configuration is valid according to Sudoku rules viz:
+The number must not appear in the same row.
+The number must not appear in the same column.
+The number must not appear in the same 3x3 subgrid.
+If the current configuration is valid, the algorithm recursively proceeds to the next
+empty cell and tries filling it with a number. This process continues until all cells
+are filled, and a complete solution is found. If the current configuration is not valid
+or no valid number can be placed in the cell, the algorithm backtracks. It undoes
+the last placement of the number and goes back to the previous cell to try a
+different number.The algorithm repeats steps 3 to 5 until it finds a valid solution or
+exhausts all possibilities. If all possibilities are exhausted, it backtracks further to
+the previous cell, exploring alternative choices.
+When all cells are filled with valid numbers according to the Sudoku rules, the
+algorithm has found a complete and valid solution for the Sudoku puzzle.
